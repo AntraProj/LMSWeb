@@ -173,6 +173,37 @@ nx g @nx/angular:service test  --project=shell
 nx g @nx/angular:service data  --project=angular
 ```
 
+### Run Unit Test for One Remote
+```bash
+npx nx test shell
+npx nx test react
+npx nx test angular
+```
+
+### Run Unit Test for All Remotes
+```bash
+npx nx run-many -t test
+```
+
+### Add new e2e Test
+```bash
+npx nx g @nx/cypress:e2e --project=shell-e2e --directory=apps/shell-e2e --devServerTarget=shell:serve
+npx nx g @nx/cypress:e2e --project=react-e2e --directory=apps/react-e2e --devServerTarget=react:serve
+npx nx g @nx/cypress:e2e --project=angular-e2e --directory=apps/angular-e2e --devServerTarget=angular:serve
+```
+
+### Run e2e Test
+```bash
+npx nx e2e shell-e2e
+npx nx e2e react-e2e
+npx nx e2e angular-e2e
+```
+
+### Create New Remote (don't do it)
+```bash
+nx g @nx/react:remote some-remote --directory=apps/some-remote --host=shell
+```
+
 ### Clean Cache
 
 ```bash
