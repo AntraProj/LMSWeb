@@ -1,15 +1,15 @@
-import { NxWelcomeComponent } from './nx-welcome.component';
 import { Route } from '@angular/router';
 import { ReactWrapperComponent } from './react-wrapper/react-wrapper.component';
+import { HomeComponent } from './home/home.component';
 
 export const appRoutes: Route[] = [
   {
-    path: 'angular',
-    loadChildren: () => import('angular/Routes').then((m) => m.remoteRoutes),
+    path: '',
+    component: HomeComponent,
   },
   {
-    path: '',
-    component: NxWelcomeComponent,
+    path: 'angular',
+    loadChildren: () => import('angular/Routes').then((m) => m.remoteRoutes),
   },
   {
     path: 'react',
