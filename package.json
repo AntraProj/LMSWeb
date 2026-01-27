@@ -38,6 +38,7 @@
     "@types/node": "18.16.9",
     "@types/react": "18.2.33",
     "@types/react-dom": "18.2.14",
+    "@types/react-router-dom": "^5.3.3",
     "@typescript-eslint/eslint-plugin": "^6.13.2",
     "@typescript-eslint/parser": "^6.13.2",
     "babel-jest": "^29.4.1",
@@ -73,6 +74,7 @@
     "@r2wc/react-to-web-component": "^2.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-router-dom": "^7.13.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"

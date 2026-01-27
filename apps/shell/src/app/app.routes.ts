@@ -2,6 +2,14 @@ import { Route } from '@angular/router';
 import { ReactWrapperComponent } from './react-wrapper/react-wrapper.component';
 import { HomeComponent } from './home/home.component';
 
+const reactRouteConfig = {
+  component: ReactWrapperComponent,
+  data: {
+    elementName: 'react-element',
+    loadChildren: () => import('react/web-components')
+  }
+};
+
 export const appRoutes: Route[] = [
   {
     path: '',
@@ -13,10 +21,15 @@ export const appRoutes: Route[] = [
   },
   {
     path: 'react',
-    component: ReactWrapperComponent, 
-    data: {
-      elementName: 'react-element', 
-      loadChildren: () => import('react/web-components') 
-    },
+    children: [
+      {
+        path: '', 
+        ...reactRouteConfig
+      },
+      {
+        path: '**', 
+        ...reactRouteConfig
+      }
+    ]
   },
 ];
