@@ -30,13 +30,14 @@ jobs:
 
       - uses: nrwl/nx-set-shas@v4
 
-      # ===== CI checks & Build =====
+      # ===== CI checks =====
       - run: npx nx-cloud record -- nx format:check
-      - run: npx nx affected -t=lint,build --configuration=production
+      
+      - run: npx nx run-many -t lint,test,build --configuration=production
 
       # ===== DEPLOY: Shell (main) =====
       - name: Deploy Shell to S3
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        if: github.ref == 'refs/heads/main'
         run: |
           cp dist/apps/shell/assets/module-federation.manifest.prod.json dist/apps/shell/assets/module-federation.manifest.json
           aws s3 sync dist/apps/shell s3://antra-lms-shell --delete
@@ -47,9 +48,10 @@ jobs:
 
       # ===== DEPLOY: Angular Remote =====
       - name: Deploy Angular Remote to S3
-        if: github.ref == 'refs/heads/angular' && github.event_name == 'push'
+        if: github.ref == 'refs/heads/main'
         run: |
-          aws s3 sync dist/apps/angular s3://antra-lms-angular --delete
+          aws s3 sync dist/apps/angular s3://antra-lms-angular --delete --exclude "remoteEntry.mjs"
+          aws s3 cp dist/apps/angular/remoteEntry.mjs s3://antra-lms-angular/remoteEntry.mjs --cache-control "max-age=0, no-cache, no-store, must-revalidate"
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -57,9 +59,10 @@ jobs:
 
       # ===== DEPLOY: React Remote =====
       - name: Deploy React Remote to S3
-        if: github.ref == 'refs/heads/react' && github.event_name == 'push'
+        if: github.ref == 'refs/heads/main'
         run: |
-          aws s3 sync dist/apps/react s3://antra-lms-react --delete
+          aws s3 sync dist/apps/react s3://antra-lms-react --delete --exclude "remoteEntry.js"
+          aws s3 cp dist/apps/react/remoteEntry.js s3://antra-lms-react/remoteEntry.js --cache-control "max-age=0, no-cache, no-store, must-revalidate"
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
