@@ -1,14 +1,7 @@
 import { Route } from '@angular/router';
+import { loadRemoteModule } from '@nx/angular/mf';
 import { ReactWrapperComponent } from './react-wrapper/react-wrapper.component';
 import { HomeComponent } from './home/home.component';
-
-const reactRouteConfig = {
-  component: ReactWrapperComponent,
-  data: {
-    elementName: 'react-element',
-    loadChildren: () => import('react/web-components')
-  }
-};
 
 export const appRoutes: Route[] = [
   {
@@ -17,19 +10,27 @@ export const appRoutes: Route[] = [
   },
   {
     path: 'angular',
-    loadChildren: () => import('angular/Routes').then((m) => m.remoteRoutes),
+    loadChildren: () => loadRemoteModule('angular', './Routes').then((m) => m.remoteRoutes),
   },
   {
     path: 'react',
     children: [
       {
-        path: '', 
-        ...reactRouteConfig
+        path: '',
+        component: ReactWrapperComponent,
+        data: {
+          elementName: 'react-element',
+          loadChildren: () => loadRemoteModule('react', './web-components'),
+        },
       },
       {
-        path: '**', 
-        ...reactRouteConfig
-      }
-    ]
+        path: '**',
+        component: ReactWrapperComponent,
+        data: {
+          elementName: 'react-element',
+          loadChildren: () => loadRemoteModule('react', './web-components'),
+        },
+      },
+    ],
   },
 ];

@@ -1,4 +1,4 @@
 {
-  "angular": "http://antra-lms-angular.s3-website.us-east-2.amazonaws.com ",
-  "react": "http://antra-lms-react.s3-website.us-east-2.amazonaws.com "
+  "angular": "http://antra-lms-angular.s3-website.us-east-2.amazonaws.com/remoteEntry.mjs",
+  "react": "http://antra-lms-react.s3-website.us-east-2.amazonaws.com/remoteEntry.js"
 }

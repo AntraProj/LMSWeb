@@ -1,4 +1,4 @@
 {
-  "angular": "http://localhost:4201",
-  "react": "http://localhost:4202"
+  "angular": "http://localhost:4201/remoteEntry.mjs",
+  "react": "http://localhost:4202/remoteEntry.js"
 }
