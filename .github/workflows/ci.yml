@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+      - angular
+      - react
   pull_request:
 
 permissions:
@@ -13,21 +15,51 @@ permissions:
 jobs:
   main:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      # Cache node_modules
+
       - uses: actions/setup-node@v3
         with:
           node-version: 20
           cache: 'npm'
+
       - run: npm ci
+
       - uses: nrwl/nx-set-shas@v4
 
-      # Uncomment to enable task distribution. --stop-agents-after is optional, but allows idle agents to shut down once the "build" targets have been requested
-      # - run: npx nx-cloud start-ci-run --distribute-on="5 linux-medium-js" --stop-agents-after="build"
-
+      # ===== CI checks =====
       - run: npx nx-cloud record -- nx format:check
-      # - run: npx nx affected -t=lint,test,build
       - run: npx nx affected -t=lint,build
+
+      # ===== DEPLOY: Shell (main) =====
+      - name: Deploy Shell to S3
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        run: |
+          aws s3 sync dist/apps/shell s3://antra-lms-shell --delete
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+
+      # ===== DEPLOY: Angular Remote =====
+      - name: Deploy Angular Remote to S3
+        if: github.ref == 'refs/heads/angular' && github.event_name == 'push'
+        run: |
+          aws s3 sync dist/apps/angular s3://antra-lms-angular --delete
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+
+      # ===== DEPLOY: React Remote =====
+      - name: Deploy React Remote to S3
+        if: github.ref == 'refs/heads/react' && github.event_name == 'push'
+        run: |
+          aws s3 sync dist/apps/react s3://antra-lms-react --delete
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
