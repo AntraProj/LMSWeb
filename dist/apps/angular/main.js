@@ -1,42 +1,14 @@
 /******/ var __webpack_modules__ = ({
 
-/***/ 5955:
-/*!***********************!*\
-  !*** container entry ***!
-  \***********************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 2612:
+/*!**********************************!*\
+  !*** ./apps/angular/src/main.ts ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-var moduleMap = {
-	"./Routes": () => {
-		return Promise.all([__webpack_require__.e("default-webpack_sharing_consume_default_angular_core_angular_core"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_common_angular_common"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_router_angular_router"), __webpack_require__.e("common")]).then(() => (() => ((__webpack_require__(/*! apps/angular/src/app/remote-entry/entry.routes.ts */ 7299)))));
-	}
-};
-var get = (module, getScope) => {
-	__webpack_require__.R = getScope;
-	getScope = (
-		__webpack_require__.o(moduleMap, module)
-			? moduleMap[module]()
-			: Promise.resolve().then(() => {
-				throw new Error('Module "' + module + '" does not exist in container.');
-			})
-	);
-	__webpack_require__.R = undefined;
-	return getScope;
-};
-var init = (shareScope, initScope) => {
-	if (!__webpack_require__.S) return;
-	var name = "default"
-	var oldScope = __webpack_require__.S[name];
-	if(oldScope && oldScope !== shareScope) throw new Error("Container initialization failed as it has already been initialized with a different share scope");
-	__webpack_require__.S[name] = shareScope;
-	return __webpack_require__.I(name, initScope);
-};
 
-// This exports getters to disallow modifications
-__webpack_require__.d(exports, {
-	get: () => (get),
-	init: () => (init)
-});
+
+Promise.all(/*! import() */[__webpack_require__.e("default-webpack_sharing_consume_default_angular_core_angular_core"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_common_angular_common"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_platform-browser_angular_platform-browser"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_router_angular_router"), __webpack_require__.e("common"), __webpack_require__.e("apps_angular_src_bootstrap_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./bootstrap */ 9468)).catch(err => console.error(err));
 
 /***/ })
 
@@ -405,10 +377,10 @@ __webpack_require__.d(exports, {
 /******/ 	var moduleToHandlerMapping = {
 /******/ 		3731: () => (loadStrictSingletonVersion("default", "@angular/core", false, [2,17,1,0], () => (Promise.all([__webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_Observable_js-node_modules_rxjs_dist_esm_internal-11fb61"), __webpack_require__.e("node_modules_angular_core_fesm2022_core_mjs")]).then(() => (() => (__webpack_require__(/*! @angular/core */ 1699))))))),
 /******/ 		6571: () => (loadStrictSingletonVersion("default", "@angular/common", false, [2,17,1,0], () => (__webpack_require__.e("default-node_modules_angular_common_fesm2022_common_mjs").then(() => (() => (__webpack_require__(/*! @angular/common */ 6575))))))),
-/******/ 		9964: () => (loadStrictSingletonVersion("default", "@angular/router", false, [2,17,1,0], () => (Promise.all([__webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_Observable_js-node_modules_rxjs_dist_esm_internal-11fb61"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_observable_of_js-node_modules_rxjs_dist_esm_inter-3042cc"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_platform-browser_angular_platform-browser"), __webpack_require__.e("default-node_modules_angular_router_fesm2022_router_mjs")]).then(() => (() => (__webpack_require__(/*! @angular/router */ 7947))))))),
 /******/ 		1873: () => (loadStrictSingletonVersion("default", "@angular/core/primitives/signals", false, [2,17,1,0], () => (__webpack_require__.e("node_modules_angular_core_fesm2022_primitives_signals_mjs").then(() => (() => (__webpack_require__(/*! @angular/core/primitives/signals */ 8186))))))),
 /******/ 		2210: () => (loadStrictSingletonVersion("default", "@angular/common/http", false, [2,17,1,0], () => (Promise.all([__webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_Observable_js-node_modules_rxjs_dist_esm_internal-11fb61"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_observable_of_js-node_modules_rxjs_dist_esm_inter-3042cc"), __webpack_require__.e("default-node_modules_angular_common_fesm2022_http_mjs")]).then(() => (() => (__webpack_require__(/*! @angular/common/http */ 4860))))))),
-/******/ 		652: () => (loadStrictSingletonVersion("default", "@angular/platform-browser", false, [2,17,1,0], () => (__webpack_require__.e("default-node_modules_angular_platform-browser_fesm2022_platform-browser_mjs").then(() => (() => (__webpack_require__(/*! @angular/platform-browser */ 6480)))))))
+/******/ 		652: () => (loadStrictSingletonVersion("default", "@angular/platform-browser", false, [2,17,1,0], () => (__webpack_require__.e("default-node_modules_angular_platform-browser_fesm2022_platform-browser_mjs").then(() => (() => (__webpack_require__(/*! @angular/platform-browser */ 6480))))))),
+/******/ 		9964: () => (loadStrictSingletonVersion("default", "@angular/router", false, [2,17,1,0], () => (Promise.all([__webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_Observable_js-node_modules_rxjs_dist_esm_internal-11fb61"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_observable_of_js-node_modules_rxjs_dist_esm_inter-3042cc"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_platform-browser_angular_platform-browser"), __webpack_require__.e("default-node_modules_angular_router_fesm2022_router_mjs")]).then(() => (() => (__webpack_require__(/*! @angular/router */ 7947)))))))
 /******/ 	};
 /******/ 	// no consumes in initial chunks
 /******/ 	var chunkMapping = {
@@ -418,9 +390,6 @@ __webpack_require__.d(exports, {
 /******/ 		"default-webpack_sharing_consume_default_angular_common_angular_common": [
 /******/ 			6571
 /******/ 		],
-/******/ 		"default-webpack_sharing_consume_default_angular_router_angular_router": [
-/******/ 			9964
-/******/ 		],
 /******/ 		"node_modules_angular_core_fesm2022_core_mjs": [
 /******/ 			1873
 /******/ 		],
@@ -429,6 +398,9 @@ __webpack_require__.d(exports, {
 /******/ 		],
 /******/ 		"default-webpack_sharing_consume_default_angular_platform-browser_angular_platform-browser": [
 /******/ 			652
+/******/ 		],
+/******/ 		"default-webpack_sharing_consume_default_angular_router_angular_router": [
+/******/ 			9964
 /******/ 		]
 /******/ 	};
 /******/ 	var startedInstallModules = {};
@@ -472,7 +444,7 @@ __webpack_require__.d(exports, {
 /******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 	// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 	var installedChunks = {
-/******/ 		"angular": 0
+/******/ 		"main": 0
 /******/ 	};
 /******/ 	
 /******/ 	__webpack_require__.f.j = (chunkId, promises) => {
@@ -559,10 +531,7 @@ __webpack_require__.d(exports, {
 /******/ // module cache are used so entry inlining is disabled
 /******/ // startup
 /******/ // Load entry module and return exports
-/******/ var __webpack_exports__ = __webpack_require__(5955);
-/******/ var __webpack_exports__get = __webpack_exports__.get;
-/******/ var __webpack_exports__init = __webpack_exports__.init;
-/******/ export { __webpack_exports__get as get, __webpack_exports__init as init };
+/******/ var __webpack_exports__ = __webpack_require__(2612);
 /******/ 
 
-//# sourceMappingURL=remoteEntry.mjs.map
+//# sourceMappingURL=main.js.map
