@@ -20,4 +20,6 @@ import { HttpClientModule } from '@angular/common/http';
   templateUrl: './sign-in.component.html',
   styleUrls: ['./sign-in.component.css'],
 })
-export class SignInComponent {}
+export class SignInComponent {
+  hide = true;
+}

@@ -1,6 +1,8 @@
 <div class = "page" >
     <div class = "header">
-        <h2>Antra LMS</h2>
+        <a href="#" class="antra-lms-link">
+            <h2>Antra LMS</h2>
+        </a>
         <h1>Welcome Back</h1>
         <p>Sign in to manage your course tickets</p>
     </div>
@@ -14,8 +16,16 @@
         <mat-form-field appearance="outline">
             <mat-label>Password</mat-label>
             <mat-icon matPrefix>lock</mat-icon>
-            <input matInput type="password" placeholder="Enter your password" />
-            <mat-icon matSuffix>visibility</mat-icon>
+            <input
+                matInput
+                [type]="hide ? 'password' : 'text'"
+                placeholder="Enter your password"
+            />
+            <button mat-icon-button matSuffix type="button" (click)="hide = !hide">
+                <mat-icon>
+                    {{hide ? 'visibility_off' : 'visibility'}}
+                </mat-icon>
+            </button>
         </mat-form-field>
 
         <div class="forgot-password">
