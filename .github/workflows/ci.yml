@@ -16,6 +16,9 @@ jobs:
   main:
     runs-on: ubuntu-latest
 
+    env:
+      NX_NO_CLOUD: 'true'
+
     steps:
       - uses: actions/checkout@v4
         with:
@@ -31,39 +34,44 @@ jobs:
       - uses: nrwl/nx-set-shas@v4
 
       # ===== CI checks =====
-      - run: npx nx-cloud record -- nx format:check
-      
+      - run: npx nx format:check      
+
       # ===== temporarily removed unit test =====
       - run: npx nx run-many -t lint,build --configuration=production
 
-      # ===== DEPLOY: Shell (main) =====
+      # ===== DEPLOY: Shell (main only) =====
       - name: Deploy Shell to S3
         if: github.ref == 'refs/heads/main'
         run: |
-          cp dist/apps/shell/assets/module-federation.manifest.prod.json dist/apps/shell/assets/module-federation.manifest.json
+          cp dist/apps/shell/assets/module-federation.manifest.prod.json \
+             dist/apps/shell/assets/module-federation.manifest.json
           aws s3 sync dist/apps/shell s3://antra-lms-shell --delete
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ${{ secrets.AWS_REGION }}
 
-      # ===== DEPLOY: Angular Remote =====
+      # ===== DEPLOY: Angular Remote (main OR angular) =====
       - name: Deploy Angular Remote to S3
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/angular'
         run: |
           aws s3 sync dist/apps/angular s3://antra-lms-angular --delete --exclude "remoteEntry.mjs"
-          aws s3 cp dist/apps/angular/remoteEntry.mjs s3://antra-lms-angular/remoteEntry.mjs --cache-control "max-age=0, no-cache, no-store, must-revalidate"
+          aws s3 cp dist/apps/angular/remoteEntry.mjs \
+            s3://antra-lms-angular/remoteEntry.mjs \
+            --cache-control "max-age=0, no-cache, no-store, must-revalidate"
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ${{ secrets.AWS_REGION }}
 
-      # ===== DEPLOY: React Remote =====
+      # ===== DEPLOY: React Remote (main OR react) =====
       - name: Deploy React Remote to S3
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/react'
         run: |
           aws s3 sync dist/apps/react s3://antra-lms-react --delete --exclude "remoteEntry.js"
-          aws s3 cp dist/apps/react/remoteEntry.js s3://antra-lms-react/remoteEntry.js --cache-control "max-age=0, no-cache, no-store, must-revalidate"
+          aws s3 cp dist/apps/react/remoteEntry.js \
+            s3://antra-lms-react/remoteEntry.js \
+            --cache-control "max-age=0, no-cache, no-store, must-revalidate"
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
