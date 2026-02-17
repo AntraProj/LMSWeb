@@ -1,0 +1,12 @@
+.toolbar {
+  padding: 0 24px;
+  height: 56px;
+}
+.brand { font-weight: 600; letter-spacing: 0.2px; }
+.spacer { flex: 1; }
+
+.btn-light-blue {
+  background: #3b82f6;
+  color: rgb(103, 120, 218);
+  border-radius: 6px;
+}
