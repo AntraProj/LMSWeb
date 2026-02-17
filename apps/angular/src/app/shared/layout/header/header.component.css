@@ -6,7 +6,9 @@
 .spacer { flex: 1; }
 
 .btn-light-blue {
-  background: #3b82f6;
-  color: rgb(103, 120, 218);
+  background: #3b82f6 !important;
+  color: white !important;
+  
   border-radius: 6px;
+  
 }
