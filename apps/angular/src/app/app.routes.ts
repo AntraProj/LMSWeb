@@ -1,23 +1,19 @@
 import { Route } from '@angular/router';
-import { EmailVerificationComponent } from './features/emailVerification.component';
-import { SignInComponent } from './sign-in/sign-in.component';
+import { SignInComponent } from './features/sign-in/sign-in.component';
+import { LandingComponent } from './features/landing/landing.component';
+import { EmailVerificationComponent } from './features/emailVerification/emailVerification.component';
 
 export const appRoutes: Route[] = [
   {
     path: '',
-    loadChildren: () =>
-      import('./remote-entry/entry.routes').then((m) => m.remoteRoutes),
-
+    component: LandingComponent
   },
   {
-    path: 'sign-in', component: SignInComponent
+    path: 'login', component: SignInComponent
   },
   {
-    path: 'verifyEmail',
+    path: 'verify',
     component: EmailVerificationComponent
-  },
-    {
-    path: 'sign-in',
-    component: SignInComponent,
-  },
+
+  }
 ];

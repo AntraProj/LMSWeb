@@ -1,3 +1,4 @@
+<lmsweb-header></lmsweb-header>
 <div class="emailVerify">
   <h1 class="emailVerify-logo__h1">Antra LMS</h1>
 
@@ -55,7 +56,7 @@
     mat-outlined-button
   mat-stroked-button
   color="primary"
-  class="email-back__btn">
+  class="email-back__btn" [routerLink]="['/login']" >
 
   <mat-icon>arrow_back</mat-icon>
   Back to Sign In
@@ -71,3 +72,4 @@
   </mat-card>
 </div>
 
+<lmsweb-footer></lmsweb-footer>
