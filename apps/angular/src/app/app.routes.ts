@@ -1,5 +1,6 @@
 import { Route } from '@angular/router';
 import { EmailVerificationComponent } from './features/emailVerification.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 export const appRoutes: Route[] = [
   {
@@ -14,5 +15,9 @@ export const appRoutes: Route[] = [
   {
     path: 'verifyEmail',
     component: EmailVerificationComponent
+  },
+    {
+    path: 'sign-in',
+    component: SignInComponent,
   },
 ];
