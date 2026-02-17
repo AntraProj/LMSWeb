@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 import { AppHeader } from "../../components/AppHeader";
 import { ProjectGrid } from "../../components/ProjectGrid";
+import { AuthProvider } from "../../context/AuthContext";
 
 const mockProjects = [
   {
@@ -19,9 +20,12 @@ const mockProjects = [
 
 export default function Dashboard() {
   return (
-    <Box sx={{ minHeight: "100vh", bgcolor: "background.default" }}>
-      <AppHeader />
-      <ProjectGrid projects={mockProjects} />
-    </Box>
+    <AuthProvider>
+      <Box sx={{ minHeight: "100vh", bgcolor: "background.default" }}>
+        <AppHeader />
+        <ProjectGrid projects={mockProjects} />
+      </Box>
+    </AuthProvider>
+
   );
 }
