@@ -1,9 +1,11 @@
+import { useState } from "react";
 import { Box } from "@mui/material";
 import { AppHeader } from "../../components/AppHeader";
 import { ProjectGrid } from "../../components/ProjectGrid";
 import { AuthProvider } from "../../context/AuthContext";
+import { CreateProjectFormState } from "../createProject/types";
 
-const mockProjects = [
+const initialProjects = [
   {
     id: "react",
     title: "React",
@@ -19,13 +21,29 @@ const mockProjects = [
 ];
 
 export default function Dashboard() {
+  const [projects, setProjects] = useState(initialProjects);
+
+  const handleCreateProject = (formState: CreateProjectFormState) => {
+    const newProject = {
+      id: Date.now().toString(),
+      title: formState.name,
+      description: formState.description,
+      workflow: formState.workflow,
+      admins: formState.admins,
+      assignees: formState.assignees,
+      image: "/assets/test.png",
+    };
+
+    setProjects((prev) => [...prev, newProject]);
+  };
+
+
   return (
     <AuthProvider>
       <Box sx={{ minHeight: "100vh", bgcolor: "background.default" }}>
-        <AppHeader />
-        <ProjectGrid projects={mockProjects} />
+        <AppHeader onCreateProject={handleCreateProject} />
+        <ProjectGrid projects={projects} />
       </Box>
     </AuthProvider>
-
   );
 }
