@@ -6,6 +6,9 @@ on:
       - main
       - angular
       - react
+  workflow_dispatch: # Manually Run Action
+    branches:
+      - integration
   pull_request:
 
 permissions:
@@ -34,7 +37,7 @@ jobs:
       - uses: nrwl/nx-set-shas@v4
 
       # ===== CI checks =====
-      - run: npx nx format:check      
+      - run: npx nx format:check
 
       # ===== temporarily removed unit test =====
       - run: npx nx run-many -t lint,build --configuration=production
