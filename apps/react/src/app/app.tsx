@@ -3,6 +3,7 @@ import styles from './app.module.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Dashboard from '../pages/dashboard/dashboard';
 import About from '../pages/about/about';
+import CreateProjectPage from '../pages/createProject';
 
 export function App() {
   const basename = window.location.pathname.startsWith('/react') ? '/react' : '/';
@@ -16,6 +17,7 @@ export function App() {
         <Routes>
           <Route path="/" element={<About />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/createProject" element={<CreateProjectPage />} />
         </Routes>
       </div>
     </BrowserRouter>
