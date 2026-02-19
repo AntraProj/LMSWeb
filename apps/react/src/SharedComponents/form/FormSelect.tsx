@@ -6,19 +6,19 @@ import {
   SelectChangeEvent,
 } from "@mui/material";
 
-type Option = {
+interface Option {
   label: string;
   value: string;
-};
+}
 
-type Props = {
+interface Props {
   label: string;
   name: string;
   value: string;
   options: Option[];
   onChange: (value: string) => void;
-  disabled?: boolean; // ✅ add this
-};
+  disabled?: boolean;
+}
 
 export default function FormSelect({
   label,

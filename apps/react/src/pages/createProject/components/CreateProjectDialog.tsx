@@ -13,7 +13,7 @@ import { CreateProjectFormState } from "../types";
 import FormInput from "../../../SharedComponents/form/FormInput";
 import FormSelect from "../../../SharedComponents/form/FormSelect";
 
-type Props = {
+interface Props {
   open: boolean;
   formState: CreateProjectFormState;
   setFormState: React.Dispatch<
@@ -21,7 +21,7 @@ type Props = {
   >;
   onCancel: () => void;
   onSubmit: () => void;
-};
+}
 
 export default function CreateProjectDialog({
   open,
