@@ -1,0 +1,170 @@
+.register-page {
+  min-height: 100vh;
+  background: #f9fafb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 16px;
+  font-family: Inter, Roboto, Arial, sans-serif;
+}
+
+.register-header {
+  text-align: center;
+  margin-bottom: 32px;
+
+  .brand {
+    color: #2f3e9e;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  h1 {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0;
+    color: #1f2937;
+  }
+
+  p {
+    margin-top: 8px;
+    color: #4b5563;
+    font-size: 14px;
+  }
+}
+
+.register-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 32px;
+  border-radius: 12px;
+}
+
+.register-card {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+
+.full-width {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+mat-form-field {
+  font-size: 14px;
+}
+
+.terms {
+  display: block;
+  margin: 16px 0 24px;
+  font-size: 13px;
+
+  a {
+    color: #4f67ff;
+    text-decoration: none;
+  }
+}
+
+.submit-btn {
+  margin-bottom: 24px;
+}
+
+mat-divider {
+  margin: 24px 0;
+}
+
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  img {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.signin {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 13px;
+
+  a {
+    color: #4f67ff;
+    font-weight: 500;
+    text-decoration: none;
+  }
+}
+
+.or-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0;
+  color: #9ca3af;
+  font-size: 13px;
+
+  mat-divider {
+    flex: 1;
+  }
+}
+
+/* Hide Edge default password reveal icon */
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
+
+/* Hide Chrome / Edge modern reveal icon */
+input[type='password']::-webkit-credentials-auto-fill-button,
+input[type='password']::-webkit-textfield-decoration-container {
+  display: none !important;
+}
+
+.password-strength {
+  margin-top: -8px;
+  margin-bottom: 16px;
+  font-size: 13px;
+}
+
+.strength-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  color: #6b7280;
+}
+
+.strength-bar {
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.strength-fill {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.rules {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rules li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  color: #9ca3af;
+}
+
+.rules li.valid {
+  color: #22c55e;
+}
+
+.rules mat-icon {
+  font-size: 18px;
+}

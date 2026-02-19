@@ -1,0 +1,208 @@
+<lmsweb-header></lmsweb-header>
+
+<div class="register-page">
+  <header class="register-header">
+    <div class="brand">Antra LMS</div>
+    <h1>Create Your Account</h1>
+    <p>Start managing courses today</p>
+  </header>
+
+  <mat-card class="register-card">
+    <form [formGroup]="form">
+      <!-- Email -->
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-icon matPrefix>mail</mat-icon>
+        <mat-label>Email Address</mat-label>
+        <input matInput type="email" formControlName="email" placeholder="you@gmail.com" />
+
+        <mat-error *ngIf="email?.hasError('required')">
+          Email is required
+        </mat-error>
+
+        <mat-error *ngIf="email?.hasError('email')">
+          Enter a valid email
+        </mat-error>
+
+
+      </mat-form-field>
+
+      <!-- Full Name -->
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-icon matPrefix>person</mat-icon>
+        <mat-label>Full Name</mat-label>
+        <input matInput formControlName="fullName" placeholder="Enter full name" />
+        <mat-error *ngIf="fullName?.hasError('required')">
+          Fullname is required
+        </mat-error>
+        
+      </mat-form-field>
+
+      <!-- Username -->
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-icon matPrefix>account_circle</mat-icon>
+        <mat-label>Username</mat-label>
+        <input matInput formControlName="username" placeholder="Enter username" />
+        <mat-error *ngIf="username?.hasError('required')">
+          Username is required
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Password Field -->
+<mat-form-field appearance="outline" class="full-width">
+  <mat-icon matPrefix>lock</mat-icon>
+
+  <mat-label>Password</mat-label>
+
+  <input
+    matInput
+    [type]="hidePassword ? 'password' : 'text'"
+    formControlName="password"
+    placeholder="Create a strong password"
+  />
+
+  <button
+    mat-icon-button
+    matSuffix
+    type="button"
+    (click)="hidePassword = !hidePassword"
+  >
+    <mat-icon>
+      {{ hidePassword ? 'visibility_off' : 'visibility' }}
+    </mat-icon>
+  </button>
+
+  <!-- Errors -->
+  <mat-error *ngIf="password?.hasError('required')">
+    Password is required
+  </mat-error>
+
+  <!-- <mat-error *ngIf="password?.hasError('minlength')">
+    Minimum 8 characters required
+  </mat-error>
+
+  <mat-error *ngIf="password?.hasError('pattern')">
+    Must contain uppercase, lowercase and number
+  </mat-error> -->
+</mat-form-field>
+
+
+<!-- Password Strength Section -->
+<div class="password-strength" *ngIf="password?.value">
+  
+  <div class="strength-header">
+    <span>Password Strength</span>
+    <span>{{ passwordStrength }}/4</span>
+  </div>
+
+  <div class="strength-bar">
+    <div
+      class="strength-fill"
+      [style.width.%]="strengthPercent"
+      [style.background]="strengthColor"
+    ></div>
+  </div>
+
+  <ul class="rules">
+    <li [class.valid]="hasMinLength">
+      <mat-icon>
+        {{ hasMinLength ? 'check_circle' : 'radio_button_unchecked' }}
+      </mat-icon>
+      At least 8 characters
+    </li>
+
+    <li [class.valid]="hasUpperCase">
+      <mat-icon>
+        {{ hasUpperCase ? 'check_circle' : 'radio_button_unchecked' }}
+      </mat-icon>
+      One uppercase letter
+    </li>
+
+    <li [class.valid]="hasLowerCase">
+      <mat-icon>
+        {{ hasLowerCase ? 'check_circle' : 'radio_button_unchecked' }}
+      </mat-icon>
+      One lowercase letter
+    </li>
+
+    <li [class.valid]="hasNumber">
+      <mat-icon>
+        {{ hasNumber ? 'check_circle' : 'radio_button_unchecked' }}
+      </mat-icon>
+      One number
+    </li>
+  </ul>
+
+</div>
+
+
+      <!-- Confirm Password -->
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-icon matPrefix>lock</mat-icon>
+        <mat-label>Confirm Password</mat-label>
+        <input
+          matInput
+          [type]="hideConfirmPassword ? 'password' : 'text'"
+          formControlName="confirmPassword"
+          placeholder="Re-enter your password"
+        />
+        <button
+          mat-icon-button
+          matSuffix
+          type="button"
+          (click)="hideConfirmPassword = !hideConfirmPassword"
+        >
+          <mat-icon>{{ hideConfirmPassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+        </button>
+                <mat-error *ngIf="confirmPassword?.hasError('required')">
+          Confirm password is required
+        </mat-error>
+
+        <mat-error *ngIf="confirmPassword?.hasError('passwordMismatch')">
+          Passwords do not match
+        </mat-error>
+
+      </mat-form-field>
+
+      <!-- Terms -->
+      <mat-checkbox formControlName="terms" class="terms">
+        I agree to the
+        <a href="#">Terms of Service</a>
+        and
+        <a href="#">Privacy Policy</a>
+      </mat-checkbox>
+
+      <!-- Submit -->
+      <button
+        mat-raised-button
+        color="primary"
+        class="full-width submit-btn"
+        [disabled]="form.invalid"
+      >
+        Create Account
+      </button>
+
+      <!-- OR divider -->
+      <div class="or-divider">
+        <mat-divider></mat-divider>
+        <span>or</span>
+        <mat-divider></mat-divider>
+      </div>
+
+      <!-- Google -->
+      <button mat-stroked-button class="full-width google-btn" type="button">
+        <img
+          src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+          alt="Google"
+        />
+        Sign up with Google
+      </button>
+
+      <p class="signin">
+        Already have an account?
+        <a routerLink="/angular/login">Sign in</a>
+      </p>
+    </form>
+  </mat-card>
+</div>
+
+<lmsweb-footer></lmsweb-footer>
