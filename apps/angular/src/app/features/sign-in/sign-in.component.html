@@ -1,0 +1,56 @@
+<lmsweb-header></lmsweb-header>
+<div class = "page" >
+    <div class = "header">
+        <a href="#" class="antra-lms-link">
+            <h2>Antra LMS</h2>
+        </a>
+        <h1>Welcome Back</h1>
+        <p>Sign in to manage your course tickets</p>
+    </div>
+    <div class="sign-in-container">
+        <mat-form-field appearance="outline">
+            <mat-icon matPrefix>email</mat-icon>
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="you@company.com" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <mat-icon matPrefix>lock</mat-icon>
+            <input
+                matInput
+                [type]="hide ? 'password' : 'text'"
+                placeholder="Enter your password"
+            />
+            <button mat-icon-button matSuffix type="button" (click)="hide = !hide">
+                <mat-icon>
+                    {{hide ? 'visibility_off' : 'visibility'}}
+                </mat-icon>
+            </button>
+        </mat-form-field>
+
+        <div class="forgot-password">
+            <a href="#">Forgot Password?</a>
+        </div>
+
+        <div class="sign-in-button">
+            <button mat-raised-button>Sign In</button>
+        </div>
+
+        <div class="divider">
+            <span>Or continue with</span>
+        </div>
+
+        <button class="google-btn">
+            <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google logo">
+            Sign in with Google
+        </button>
+
+        <p class="signup-text">
+        Don't have an account?
+        <a href="#">Sign up</a>
+    </p>
+    </div>
+
+</div>
+<lmsweb-footer></lmsweb-footer>
