@@ -3,6 +3,7 @@ import { ThemeProvider, CssBaseline, createTheme } from '@mui/material';
 
 import Dashboard from '../pages/dashboard/dashboard';
 import About from '../pages/about/about';
+import CreateProjectPage from '../pages/createProject';
 
 const darkTheme = createTheme({
   palette: {
@@ -26,12 +27,15 @@ export function App() {
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
       <BrowserRouter basename={basename}>
-      <Routes>
-  <Route path="/" element={<Dashboard />} />
-  <Route path="/about" element={<About />} />
-</Routes>
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/createProject" element={<CreateProjectPage />} />
+        </Routes>
       </BrowserRouter>
     </ThemeProvider>
+
   );
 }
 
