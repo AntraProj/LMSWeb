@@ -24,8 +24,11 @@ export default function KanbanColumn({ title, tasks }: Props) {
 
       {/* column body (empty for now) */}
       <Box sx={{ flex: 1, p: 2,minHeight:"80vh" }} >
-        <KanbanCard />
-        <KanbanCard />
+       {
+        tasks.map(task=>{
+          return <KanbanCard key={task.id} task={task}/>
+        })
+       }
       </Box>
     </Box>
   );
