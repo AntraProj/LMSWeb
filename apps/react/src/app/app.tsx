@@ -29,14 +29,14 @@ function App() {
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
       <BrowserRouter basename={basename}>
-          <Routes>
-                  <Route path="/" element={<Dashboard />} />
-                  <Route path="/about" element={<About />} />
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/about" element={<About />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/createProject" element={<CreateProjectPage />} />
           <Route path="/backlog" element={<BacklogPage />} />
-          <Route path="/active" element={<ActivePage />} />
-                  <Route path="/active" element={<ActiveBoard />} />
+          {/* <Route path="/active" element={<ActivePage />} /> */}
+          <Route path="/activeboard" element={<ActiveBoard />} />
           <Route path="*" element={<Dashboard />} />
         </Routes>
       </BrowserRouter>
