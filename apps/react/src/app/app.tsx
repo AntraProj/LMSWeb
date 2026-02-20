@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider, CssBaseline, createTheme } from '@mui/material';
 import BacklogPage from '../pages/backlog/backlog';
-import ActivePage from '../pages/active/active';
+// import ActivePage from '../pages/active/active';
 import Dashboard from '../pages/dashboard/dashboard';
 import About from '../pages/about/about';
 import CreateProjectPage from '../pages/createProject';

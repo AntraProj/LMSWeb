@@ -7,15 +7,17 @@ interface KanbanCardProps{
 }
 
 const KanbanCard = ({ task }: KanbanCardProps) => {
-    const { id,
+    const { 
+        // id,
         title,
-        description,
+        // description,
         priority,
         storyPoints,
         dueDate,
         assignee,
-        reporter,
-        status } = task;
+        // reporter,
+        // status 
+        } = task;
     const priorityStyle = priorityConfig[priority];
     return (
         <Card
