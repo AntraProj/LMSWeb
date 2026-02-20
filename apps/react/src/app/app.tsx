@@ -4,6 +4,8 @@ import { ThemeProvider, CssBaseline, createTheme } from '@mui/material';
 import Dashboard from '../pages/dashboard/dashboard';
 import About from '../pages/about/about';
 import CreateProjectPage from '../pages/createProject';
+import BacklogPage from '../pages/backlog/backlog';
+import ActivePage from '../pages/active/active';
 
 const darkTheme = createTheme({
   palette: {
@@ -32,6 +34,8 @@ export function App() {
           <Route path="/about" element={<About />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/createProject" element={<CreateProjectPage />} />
+          <Route path="/backlog" element={<BacklogPage />} />
+          <Route path="/active" element={<ActivePage />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
@@ -40,3 +44,7 @@ export function App() {
 }
 
 export default App;
+
+
+
+
