@@ -17,6 +17,8 @@ const darkTheme = createTheme({
     },
   },
 });
+import BacklogPage from '../pages/backlog/backlog';
+import ActivePage from '../pages/active/active';
 
 export function App() {
   const basename = window.location.pathname.startsWith('/react')
@@ -32,6 +34,8 @@ export function App() {
           <Route path="/about" element={<About />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/createProject" element={<CreateProjectPage />} />
+          <Route path="/backlog" element={<BacklogPage />} />
+          <Route path="/active" element={<ActivePage />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
