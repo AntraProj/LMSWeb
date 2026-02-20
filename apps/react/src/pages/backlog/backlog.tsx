@@ -5,12 +5,11 @@ import BacklogHeader from "./BacklogHeader";
 export default function BacklogPage() {
   const handleCreateAssignment = () => {
     // later: open Create Assignment modal (Screen 5)
-    console.log("Create Assignment clicked");
   };
 
   return (
     <Container maxWidth="lg" sx={{ py: 4 }}>
-      {/* Header + Tabs */}
+\
       <Box sx={{ display: "flex", justifyContent: "space-between", gap: 2, alignItems: "flex-start" }}>
         <Box sx={{ flex: 1 }}>
           <BacklogHeader
