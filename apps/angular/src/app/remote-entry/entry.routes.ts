@@ -18,6 +18,14 @@ export const remoteRoutes: Route[] = [
             (m) => m.LandingComponent
           ),
       },
-    ]
+      {
+        path: 'register',
+        loadComponent: () =>
+          import('../features/register/register.component').then(
+            (m) => m.RegisterComponent
+          ),
+      },
+
+    ],
   },
 ];
