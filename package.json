@@ -79,6 +79,7 @@
     "@mui/icons-material": "^7.3.7",
     "@mui/material": "^7.3.7",
     "@r2wc/react-to-web-component": "^2.1.0",
+    "lucide-react": "^0.563.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-router-dom": "^7.13.0",
