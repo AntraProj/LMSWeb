@@ -1,8 +1,14 @@
 import { AppBar, Toolbar, Typography, Box } from "@mui/material";
 import { useAuth } from "../context/AuthContext";
 import CreateProjectContainer from "../pages/createProject/CreateProjectContainer";
+import { CreateProjectFormState } from "../pages/createProject/types";
 
-export function AppHeader() {
+interface Props {
+  onCreateProject: (data: CreateProjectFormState) => void;
+}
+
+
+export function AppHeader({ onCreateProject }: Props) {
   const { user } = useAuth();
   const isTrainer = user?.role === "trainer";
 
@@ -29,7 +35,9 @@ export function AppHeader() {
           <Typography fontWeight={700}>Antra LMS</Typography>
         </Box>
 
-        {isTrainer && <CreateProjectContainer />}
+        {isTrainer && (
+          <CreateProjectContainer onCreateProject={onCreateProject} />
+        )}
       </Toolbar>
     </AppBar>
   );
