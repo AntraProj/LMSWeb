@@ -1,12 +1,12 @@
 import { Box } from "@mui/material";
 import StatusColumnHeader from "./StatusColumnHeader";
 import KanbanCard from "./KanbanCard";
+import type { Task } from "../../types/Task";
 
-type Props = {
+interface Props {
   title: string;
-  tasks: any[];
-};
-
+  tasks: Task[];
+}
 export default function KanbanColumn({ title, tasks }: Props) {
   return (
     <Box

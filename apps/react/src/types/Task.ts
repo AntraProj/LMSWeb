@@ -5,7 +5,7 @@ export interface Task {
     priority: "Low" | "Medium" | "High";
     storyPoints: number;
     dueDate: string;
-    assignee: String;
+    assignee: string;
     reporter: string;
     status: "todo" | "inprogress" | "done";
 }

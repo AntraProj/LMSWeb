@@ -1,10 +1,10 @@
 import { Box, Typography, IconButton, Chip } from "@mui/material";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 
-type Props = {
+interface Props {
   title: string;
   count: number;
-};
+}
 
 const StatusColumnHeader = ({ title, count }: Props) => {
   return (
