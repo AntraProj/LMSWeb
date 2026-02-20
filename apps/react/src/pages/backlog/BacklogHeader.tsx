@@ -1,10 +1,10 @@
 import { Box, Tabs, Tab, Typography } from "@mui/material";
 import { useLocation, useNavigate } from "react-router-dom";
 
-type Props = {
+interface Props {
   title: string;
   subtitle: string;
-};
+}
 
 export default function BacklogHeader({ title, subtitle }: Props) {
   const location = useLocation();
