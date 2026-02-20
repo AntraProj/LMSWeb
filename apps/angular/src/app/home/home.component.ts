@@ -10,7 +10,7 @@ import { TestService } from '../test.service';
   styleUrl: './home.component.css',
 })
 export class HomeComponent implements OnInit {
-  constructor(private testService: TestService) { }
+  constructor(private testService: TestService) {}
 
   ngOnInit() {
     this.testService.print();
