@@ -1,49 +1,25 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import styles from './app.module.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { ThemeProvider, CssBaseline, createTheme } from '@mui/material';
-import BacklogPage from '../pages/backlog/backlog';
-import ActivePage from '../pages/active/active';
 import Dashboard from '../pages/dashboard/dashboard';
 import About from '../pages/about/about';
-import CreateProjectPage from '../pages/createProject';
-
-const darkTheme = createTheme({
-  palette: {
-    mode: 'dark',
-    background: {
-      default: '#0b0d10',
-      paper: '#14161a',
-    },
-    primary: {
-      main: '#2563eb',
-    },
-  },
-});
 
 export function App() {
-  const basename = window.location.pathname.startsWith('/react')
-    ? '/react'
-    : '/';
+  const basename = window.location.pathname.startsWith('/react') ? '/react' : '/';
 
   return (
-    <ThemeProvider theme={darkTheme}>
-      <CssBaseline />
-      <BrowserRouter basename={basename}>
+    <BrowserRouter basename={basename}>
+      <div style={{ border: '2px dashed blue', padding: '10px', margin: '10px' }}>
+        <h2>React Remote App</h2>
+        <p>Current Basename: {basename}</p> 
+        
         <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/" element={<About />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/createProject" element={<CreateProjectPage />} />
-          <Route path="/backlog" element={<BacklogPage />} />
-          <Route path="/active" element={<ActivePage />} />
         </Routes>
-      </BrowserRouter>
-    </ThemeProvider>
-
+      </div>
+    </BrowserRouter>
   );
 }
 
 export default App;
-
-
-
-
