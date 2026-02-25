@@ -5,7 +5,8 @@ import {
     Typography,
     IconButton,
     Checkbox,
-    Divider
+    Divider,
+    Box
 } from '@mui/material';
 import {
     useParams,
@@ -50,24 +51,30 @@ const ActiveProject: React.FC = () => {
 
     return (
         <div style={{margin:'1rem'}}>
-            {/* Header */}
-            <div
-                style={{
-                    margin: "1rem",
-                    color: "#fff",
+
+            {/* Header with back button */}
+            <Box
+                sx={{
                     display: "flex",
                     alignItems: "center",
-                    gap: "12px"
+                    gap: 2,
+                    p: 3,
+                    borderBottom: "1px solid #23262b",
                 }}
             >
-                <IconButton onClick={() => navigate("/dashboard")} color="inherit">
+                <IconButton
+                    onClick={() => navigate('/')}
+                    sx={{
+                        color: "#e6e7eb",
+                        "&:hover": { bgcolor: "#1f2227" }
+                    }}
+                >
                     <ArrowBackIcon />
                 </IconButton>
-
-                <Typography variant="h5" sx={{ fontWeight: 700 }}>
-                    Project {projectId}
+                <Typography variant="h5" sx={{ fontWeight: 700 }} color="#e6e7eb">
+                    {projectId}
                 </Typography>
-            </div>
+            </Box>
 
             <Divider />
 

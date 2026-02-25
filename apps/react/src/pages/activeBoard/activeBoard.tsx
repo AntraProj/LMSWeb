@@ -113,29 +113,6 @@ const ActiveBoard = () => {
 
     return (
         <Box sx={{ bgcolor: "#0b0d10", minHeight: "100vh" }}>
-            {/* Header with back button */}
-            <Box
-                sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 2,
-                    p: 3,
-                    borderBottom: "1px solid #23262b",
-                }}
-            >
-                <IconButton
-                    onClick={() => navigate('/')}
-                    sx={{
-                        color: "#e6e7eb",
-                        "&:hover": { bgcolor: "#1f2227" }
-                    }}
-                >
-                    <ArrowBackIcon />
-                </IconButton>
-                <Typography variant="h6" fontWeight={700} color="#e6e7eb">
-                    Active Board
-                </Typography>
-            </Box>
 
             {/* Filter  */}
             <Box sx={{ display: "flex", alignItems: "center", gap: 2, mt: 3, ml: 4 }}>
