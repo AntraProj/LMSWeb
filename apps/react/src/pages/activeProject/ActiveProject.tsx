@@ -11,7 +11,6 @@ import {
 import {
     useParams,
     useNavigate,
-    useLocation,
     Outlet
 } from 'react-router-dom';
 import ActiveBoard from '../activeBoard/ActiveBoard';
@@ -42,7 +41,6 @@ const availableTabs: Tab[] = [
 const ActiveProject: React.FC = () => {
     const { projectId } = useParams();
     const navigate = useNavigate();
-    const location = useLocation();
     const [selectedTab, setSelectedTab] = useState(0);
 
     const handleTabSwitch = (tabIdx: number) => {

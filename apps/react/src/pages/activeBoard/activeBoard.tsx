@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
-import { Box, IconButton, Typography } from '@mui/material';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import { useNavigate } from 'react-router-dom';
+import { Box, Typography } from '@mui/material';
 import KanbanColumn from '../../components/kanban/KanbanColumn';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -94,7 +92,6 @@ export const mockData: Task[] = [
 const ActiveBoard = () => {
     const [priorityFilter, setPriorityFilter] = useState<PriorityFilter>("All");
     let tempMockData = [];
-    const navigate = useNavigate();
 
     if (priorityFilter === "All") {
         tempMockData = mockData;

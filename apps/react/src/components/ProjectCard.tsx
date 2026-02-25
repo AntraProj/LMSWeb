@@ -47,7 +47,7 @@ export function ProjectCard({ project }: { project: Project }) {
     setAnchorEl(null);
   };
 
-  const handleCardClick = (projectId: Number | String) => {
+  const handleCardClick = (projectId: number | string) => {
     console.log(`/project/${projectId}`)
     navigate(`/project/${projectId}`);
   };
