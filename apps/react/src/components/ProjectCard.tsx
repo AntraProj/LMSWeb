@@ -47,11 +47,9 @@ export function ProjectCard({ project }: { project: Project }) {
     setAnchorEl(null);
   };
 
-  const handleCardClick = (event: React.MouseEvent<HTMLElement>) => {
-    const target = event.target as HTMLElement;
-    if (target.closest('[data-menu-trigger="true"]')) return;
-    if (target.closest('[role="menu"]')) return;
-    navigate("/active");
+  const handleCardClick = (projectId: Number | String) => {
+    console.log(`/project/${projectId}`)
+    navigate(`/project/${projectId}`);
   };
 
   return (
@@ -65,7 +63,7 @@ export function ProjectCard({ project }: { project: Project }) {
           boxShadow: 4,
         },
       }}
-      onClick={handleCardClick}
+      onClick={()=>{handleCardClick(project.id)}}
     >
       <CardMedia component="img" height="160" image={project.image} />
 

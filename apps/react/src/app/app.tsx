@@ -1,11 +1,12 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route , Navigate} from 'react-router-dom';
 import { ThemeProvider, CssBaseline, createTheme } from '@mui/material';
 import BacklogPage from '../pages/backlog/backlog';
-// import ActivePage from '../pages/active/active';
+import ActivePage from '../pages/active/active';
 import Dashboard from '../pages/dashboard/dashboard';
 import About from '../pages/about/about';
 import CreateProjectPage from '../pages/createProject';
-import ActiveBoard from '../pages/activeBoard/activeBoard';
+import ActiveProject from '../pages/activeProject/ActiveProject';
+import ActiveBoard from '../pages/activeBoard/ActiveBoard';
 
 const darkTheme = createTheme({
   palette: {
@@ -30,13 +31,14 @@ function App() {
       <CssBaseline />
       <BrowserRouter basename={basename}>
         <Routes>
-          <Route path="/" element={<Dashboard />} />
+          <Route path="/" element={<Navigate to="/dashboard" replace/>} />
           <Route path="/about" element={<About />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/createProject" element={<CreateProjectPage />} />
           <Route path="/backlog" element={<BacklogPage />} />
           {/* <Route path="/active" element={<ActivePage />} /> */}
-          <Route path="/active" element={<ActiveBoard />} />
+          <Route path="/project/:projectId" element={<ActiveProject />}/>
+          <Route path="/project/:projectId/activeboard" element={<ActiveBoard />}/>
           <Route path="*" element={<Dashboard />} />
         </Routes>
       </BrowserRouter>
