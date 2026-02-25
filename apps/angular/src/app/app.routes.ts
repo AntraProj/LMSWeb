@@ -10,6 +10,9 @@ export const appRoutes: Route[] = [
     component: LandingComponent
   },
   {
+    path: 'landing', component: LandingComponent
+  },
+  {
     path: 'login', component: SignInComponent
   },
   {
@@ -18,6 +21,6 @@ export const appRoutes: Route[] = [
 
   },
   {
-    path:'register', component: RegisterComponent
+    path: 'register', component: RegisterComponent
   }
 ];
