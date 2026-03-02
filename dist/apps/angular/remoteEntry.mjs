@@ -1,11 +1,14 @@
 /******/ var __webpack_modules__ = ({
 
 /***/ 5955:
+/*!***********************!*\
+  !*** container entry ***!
+  \***********************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 var moduleMap = {
 	"./Routes": () => {
-		return Promise.all([__webpack_require__.e(731), __webpack_require__.e(571), __webpack_require__.e(964), __webpack_require__.e(592)]).then(() => (() => ((__webpack_require__(7299)))));
+		return Promise.all([__webpack_require__.e("default-webpack_sharing_consume_default_angular_core_angular_core"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_common_angular_common"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_router_angular_router"), __webpack_require__.e("common"), __webpack_require__.e("apps_angular_src_app_remote-entry_entry_routes_ts")]).then(() => (() => ((__webpack_require__(/*! apps/angular/src/app/remote-entry/entry.routes.ts */ 7299)))));
 	}
 };
 var get = (module, getScope) => {
@@ -112,7 +115,7 @@ __webpack_require__.d(exports, {
 /******/ 	// This function allow to reference async chunks
 /******/ 	__webpack_require__.u = (chunkId) => {
 /******/ 		// return url for filenames based on template
-/******/ 		return "" + (chunkId === 592 ? "common" : chunkId) + "." + {"29":"dad6a28cbaecf592","117":"e920a4caabb1bd53","178":"bf51f38b330019bd","571":"bbaa50a431a6c2c4","592":"34cd5cccec77d593","593":"8500fd06050b618b","652":"94be791ed35bc955","717":"5e07f25606ba8a8b","731":"b71c081106886a39","814":"41c6eec334c51c3a","862":"1f4947ee47719340","879":"24e832bf13eab6e0","964":"0755751e0ef46e27"}[chunkId] + ".js";
+/******/ 		return "" + chunkId + ".js";
 /******/ 	};
 /******/ })();
 /******/ 
@@ -228,12 +231,24 @@ __webpack_require__.d(exports, {
 /******/ 		var promises = [];
 /******/ 		switch(name) {
 /******/ 			case "default": {
-/******/ 				register("@angular/common/http", "17.1.3", () => (Promise.all([__webpack_require__.e(731), __webpack_require__.e(571), __webpack_require__.e(178), __webpack_require__.e(862)]).then(() => (() => (__webpack_require__(9862))))));
-/******/ 				register("@angular/common", "17.1.3", () => (Promise.all([__webpack_require__.e(731), __webpack_require__.e(814)]).then(() => (() => (__webpack_require__(6814))))));
-/******/ 				register("@angular/core/primitives/signals", "17.1.3", () => (__webpack_require__.e(717).then(() => (() => (__webpack_require__(4717))))));
-/******/ 				register("@angular/core", "17.1.3", () => (__webpack_require__.e(879).then(() => (() => (__webpack_require__(5879))))));
-/******/ 				register("@angular/platform-browser", "17.1.3", () => (Promise.all([__webpack_require__.e(731), __webpack_require__.e(571), __webpack_require__.e(593)]).then(() => (() => (__webpack_require__(6593))))));
-/******/ 				register("@angular/router", "17.1.3", () => (Promise.all([__webpack_require__.e(731), __webpack_require__.e(571), __webpack_require__.e(178), __webpack_require__.e(652), __webpack_require__.e(117)]).then(() => (() => (__webpack_require__(3117))))));
+/******/ 				register("@angular/animations/browser", "17.1.3", () => (Promise.all([__webpack_require__.e("default-webpack_sharing_consume_default_angular_core_angular_core"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_animations_angular_animations"), __webpack_require__.e("default-node_modules_angular_animations_fesm2022_browser_mjs")]).then(() => (() => (__webpack_require__(/*! ./node_modules/@angular/animations/fesm2022/browser.mjs */ 570))))));
+/******/ 				register("@angular/animations", "17.1.3", () => (Promise.all([__webpack_require__.e("default-webpack_sharing_consume_default_angular_core_angular_core"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_common_angular_common"), __webpack_require__.e("default-node_modules_angular_animations_fesm2022_animations_mjs")]).then(() => (() => (__webpack_require__(/*! ./node_modules/@angular/animations/fesm2022/animations.mjs */ 2501))))));
+/******/ 				register("@angular/common/http", "17.1.3", () => (Promise.all([__webpack_require__.e("default-webpack_sharing_consume_default_angular_core_angular_core"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_common_angular_common"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_Observable_js-node_modules_rxjs_dist_esm_internal-a1f6ab"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_observable_innerFrom_js-node_modules_rxjs_dist_es-f396f9"), __webpack_require__.e("default-node_modules_angular_common_fesm2022_http_mjs")]).then(() => (() => (__webpack_require__(/*! ./node_modules/@angular/common/fesm2022/http.mjs */ 4860))))));
+/******/ 				register("@angular/common", "17.1.3", () => (Promise.all([__webpack_require__.e("default-webpack_sharing_consume_default_angular_core_angular_core"), __webpack_require__.e("default-node_modules_angular_common_fesm2022_common_mjs")]).then(() => (() => (__webpack_require__(/*! ./node_modules/@angular/common/fesm2022/common.mjs */ 6575))))));
+/******/ 				register("@angular/core", "17.1.3", () => (Promise.all([__webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_Observable_js-node_modules_rxjs_dist_esm_internal-a1f6ab"), __webpack_require__.e("node_modules_angular_core_fesm2022_core_mjs")]).then(() => (() => (__webpack_require__(/*! ./node_modules/@angular/core/fesm2022/core.mjs */ 1699))))));
+/******/ 				register("@angular/forms", "17.1.3", () => (Promise.all([__webpack_require__.e("default-webpack_sharing_consume_default_angular_core_angular_core"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_common_angular_common"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_Observable_js-node_modules_rxjs_dist_esm_internal-a1f6ab"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_observable_innerFrom_js-node_modules_rxjs_dist_es-f396f9"), __webpack_require__.e("default-node_modules_angular_forms_fesm2022_forms_mjs")]).then(() => (() => (__webpack_require__(/*! ./node_modules/@angular/forms/fesm2022/forms.mjs */ 8849))))));
+/******/ 				register("@angular/material/button", "17.3.10", () => (Promise.all([__webpack_require__.e("default-webpack_sharing_consume_default_angular_core_angular_core"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_common_angular_common"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_Observable_js-node_modules_rxjs_dist_esm_internal-a1f6ab"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_observable_innerFrom_js-node_modules_rxjs_dist_es-f396f9"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_material_core_angular_material_core"), __webpack_require__.e("default-node_modules_angular_cdk_fesm2022_platform_mjs"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_Subject_js-node_modules_rxjs_dist_esm_internal_ob-26f521"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_observable_from_js-node_modules_rxjs_dist_esm_int-f5c4d4"), __webpack_require__.e("default-node_modules_angular_cdk_fesm2022_a11y_mjs"), __webpack_require__.e("default-node_modules_angular_material_fesm2022_button_mjs")]).then(() => (() => (__webpack_require__(/*! ./node_modules/@angular/material/fesm2022/button.mjs */ 895))))));
+/******/ 				register("@angular/material/card", "17.3.10", () => (Promise.all([__webpack_require__.e("default-webpack_sharing_consume_default_angular_core_angular_core"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_common_angular_common"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_material_core_angular_material_core"), __webpack_require__.e("default-node_modules_angular_material_fesm2022_card_mjs")]).then(() => (() => (__webpack_require__(/*! ./node_modules/@angular/material/fesm2022/card.mjs */ 8497))))));
+/******/ 				register("@angular/material/checkbox", "17.3.10", () => (Promise.all([__webpack_require__.e("default-webpack_sharing_consume_default_angular_core_angular_core"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_material_core_angular_material_core"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_forms_angular_forms"), __webpack_require__.e("default-node_modules_angular_material_fesm2022_checkbox_mjs")]).then(() => (() => (__webpack_require__(/*! ./node_modules/@angular/material/fesm2022/checkbox.mjs */ 6658))))));
+/******/ 				register("@angular/material/core", "17.3.10", () => (Promise.all([__webpack_require__.e("default-webpack_sharing_consume_default_angular_core_angular_core"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_common_angular_common"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_Observable_js-node_modules_rxjs_dist_esm_internal-a1f6ab"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_observable_innerFrom_js-node_modules_rxjs_dist_es-f396f9"), __webpack_require__.e("default-node_modules_angular_cdk_fesm2022_platform_mjs"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_Subject_js-node_modules_rxjs_dist_esm_internal_ob-26f521"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_observable_from_js-node_modules_rxjs_dist_esm_int-f5c4d4"), __webpack_require__.e("default-node_modules_angular_cdk_fesm2022_a11y_mjs"), __webpack_require__.e("default-node_modules_angular_material_fesm2022_core_mjs")]).then(() => (() => (__webpack_require__(/*! ./node_modules/@angular/material/fesm2022/core.mjs */ 5309))))));
+/******/ 				register("@angular/material/divider", "17.3.10", () => (Promise.all([__webpack_require__.e("default-webpack_sharing_consume_default_angular_core_angular_core"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_material_core_angular_material_core"), __webpack_require__.e("common"), __webpack_require__.e("node_modules_angular_cdk_fesm2022_coercion_mjs-_bff61")]).then(() => (() => (__webpack_require__(/*! ./node_modules/@angular/material/fesm2022/divider.mjs */ 9400))))));
+/******/ 				register("@angular/material/form-field", "17.3.10", () => (Promise.all([__webpack_require__.e("default-webpack_sharing_consume_default_angular_core_angular_core"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_common_angular_common"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_Observable_js-node_modules_rxjs_dist_esm_internal-a1f6ab"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_observable_innerFrom_js-node_modules_rxjs_dist_es-f396f9"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_material_core_angular_material_core"), __webpack_require__.e("default-node_modules_angular_cdk_fesm2022_platform_mjs"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_Subject_js-node_modules_rxjs_dist_esm_internal_ob-26f521"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_observable_from_js-node_modules_rxjs_dist_esm_int-f5c4d4"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_animations_angular_animations"), __webpack_require__.e("default-node_modules_angular_material_fesm2022_form-field_mjs")]).then(() => (() => (__webpack_require__(/*! ./node_modules/@angular/material/fesm2022/form-field.mjs */ 1333))))));
+/******/ 				register("@angular/material/icon", "17.3.10", () => (Promise.all([__webpack_require__.e("default-webpack_sharing_consume_default_angular_core_angular_core"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_common_angular_common"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_Observable_js-node_modules_rxjs_dist_esm_internal-a1f6ab"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_observable_innerFrom_js-node_modules_rxjs_dist_es-f396f9"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_material_core_angular_material_core"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_platform-browser_angular_platform-browser"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_common_http_angular_common_http"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_Subject_js-node_modules_rxjs_dist_esm_internal_ob-fdb1f9"), __webpack_require__.e("default-node_modules_angular_material_fesm2022_icon_mjs")]).then(() => (() => (__webpack_require__(/*! ./node_modules/@angular/material/fesm2022/icon.mjs */ 6515))))));
+/******/ 				register("@angular/material/input", "17.3.10", () => (Promise.all([__webpack_require__.e("default-webpack_sharing_consume_default_angular_core_angular_core"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_common_angular_common"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_Observable_js-node_modules_rxjs_dist_esm_internal-a1f6ab"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_observable_innerFrom_js-node_modules_rxjs_dist_es-f396f9"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_material_core_angular_material_core"), __webpack_require__.e("default-node_modules_angular_cdk_fesm2022_platform_mjs"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_Subject_js-node_modules_rxjs_dist_esm_internal_ob-26f521"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_forms_angular_forms"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_material_form-field_angular_material_form-field"), __webpack_require__.e("default-node_modules_angular_material_fesm2022_input_mjs")]).then(() => (() => (__webpack_require__(/*! ./node_modules/@angular/material/fesm2022/input.mjs */ 26))))));
+/******/ 				register("@angular/material/toolbar", "17.3.10", () => (Promise.all([__webpack_require__.e("default-webpack_sharing_consume_default_angular_core_angular_core"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_common_angular_common"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_material_core_angular_material_core"), __webpack_require__.e("default-node_modules_angular_cdk_fesm2022_platform_mjs"), __webpack_require__.e("common")]).then(() => (() => (__webpack_require__(/*! ./node_modules/@angular/material/fesm2022/toolbar.mjs */ 2484))))));
+/******/ 				register("@angular/platform-browser/animations", "17.1.3", () => (Promise.all([__webpack_require__.e("default-webpack_sharing_consume_default_angular_core_angular_core"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_common_angular_common"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_platform-browser_angular_platform-browser"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_animations_browser_angular_animations_browser"), __webpack_require__.e("common")]).then(() => (() => (__webpack_require__(/*! ./node_modules/@angular/platform-browser/fesm2022/animations.mjs */ 4987))))));
+/******/ 				register("@angular/platform-browser", "17.1.3", () => (Promise.all([__webpack_require__.e("default-webpack_sharing_consume_default_angular_core_angular_core"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_common_angular_common"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_common_http_angular_common_http"), __webpack_require__.e("default-node_modules_angular_platform-browser_fesm2022_platform-browser_mjs")]).then(() => (() => (__webpack_require__(/*! ./node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs */ 6480))))));
+/******/ 				register("@angular/router", "17.1.3", () => (Promise.all([__webpack_require__.e("default-webpack_sharing_consume_default_angular_core_angular_core"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_common_angular_common"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_Observable_js-node_modules_rxjs_dist_esm_internal-a1f6ab"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_observable_innerFrom_js-node_modules_rxjs_dist_es-f396f9"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_platform-browser_angular_platform-browser"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_Subject_js-node_modules_rxjs_dist_esm_internal_ob-fdb1f9"), __webpack_require__.e("default-node_modules_angular_router_fesm2022_router_mjs")]).then(() => (() => (__webpack_require__(/*! ./node_modules/@angular/router/fesm2022/router.mjs */ 7947))))));
 /******/ 			}
 /******/ 			break;
 /******/ 		}
@@ -400,32 +415,66 @@ __webpack_require__.d(exports, {
 /******/ 	});
 /******/ 	var installedModules = {};
 /******/ 	var moduleToHandlerMapping = {
-/******/ 		3731: () => (loadStrictSingletonVersion("default", "@angular/core", false, [2,17,1,0], () => (__webpack_require__.e(879).then(() => (() => (__webpack_require__(5879))))))),
-/******/ 		6571: () => (loadStrictSingletonVersion("default", "@angular/common", false, [2,17,1,0], () => (__webpack_require__.e(814).then(() => (() => (__webpack_require__(6814))))))),
-/******/ 		9964: () => (loadStrictSingletonVersion("default", "@angular/router", false, [2,17,1,0], () => (Promise.all([__webpack_require__.e(178), __webpack_require__.e(652), __webpack_require__.e(117)]).then(() => (() => (__webpack_require__(3117))))))),
-/******/ 		1873: () => (loadStrictSingletonVersion("default", "@angular/core/primitives/signals", false, [2,17,1,0], () => (__webpack_require__.e(717).then(() => (() => (__webpack_require__(4717))))))),
-/******/ 		2210: () => (loadStrictSingletonVersion("default", "@angular/common/http", false, [2,17,1,0], () => (Promise.all([__webpack_require__.e(178), __webpack_require__.e(862)]).then(() => (() => (__webpack_require__(9862))))))),
-/******/ 		652: () => (loadStrictSingletonVersion("default", "@angular/platform-browser", false, [2,17,1,0], () => (__webpack_require__.e(593).then(() => (() => (__webpack_require__(6593)))))))
+/******/ 		3731: () => (loadStrictSingletonVersion("default", "@angular/core", false, [2,17,1,0], () => (Promise.all([__webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_Observable_js-node_modules_rxjs_dist_esm_internal-a1f6ab"), __webpack_require__.e("node_modules_angular_core_fesm2022_core_mjs")]).then(() => (() => (__webpack_require__(/*! @angular/core */ 1699))))))),
+/******/ 		6571: () => (loadStrictSingletonVersion("default", "@angular/common", false, [2,17,1,0], () => (__webpack_require__.e("default-node_modules_angular_common_fesm2022_common_mjs").then(() => (() => (__webpack_require__(/*! @angular/common */ 6575))))))),
+/******/ 		9964: () => (loadStrictSingletonVersion("default", "@angular/router", false, [2,17,1,0], () => (Promise.all([__webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_Observable_js-node_modules_rxjs_dist_esm_internal-a1f6ab"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_observable_innerFrom_js-node_modules_rxjs_dist_es-f396f9"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_platform-browser_angular_platform-browser"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_Subject_js-node_modules_rxjs_dist_esm_internal_ob-fdb1f9"), __webpack_require__.e("default-node_modules_angular_router_fesm2022_router_mjs")]).then(() => (() => (__webpack_require__(/*! @angular/router */ 7947))))))),
+/******/ 		8012: () => (loadStrictSingletonVersion("default", "@angular/animations", false, [2,17,1,0], () => (Promise.all([__webpack_require__.e("default-webpack_sharing_consume_default_angular_common_angular_common"), __webpack_require__.e("default-node_modules_angular_animations_fesm2022_animations_mjs")]).then(() => (() => (__webpack_require__(/*! @angular/animations */ 2501))))))),
+/******/ 		2270: () => (loadStrictSingletonVersion("default", "@angular/material/core", false, [2,17,3,10], () => (Promise.all([__webpack_require__.e("default-webpack_sharing_consume_default_angular_common_angular_common"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_Observable_js-node_modules_rxjs_dist_esm_internal-a1f6ab"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_observable_innerFrom_js-node_modules_rxjs_dist_es-f396f9"), __webpack_require__.e("default-node_modules_angular_cdk_fesm2022_platform_mjs"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_Subject_js-node_modules_rxjs_dist_esm_internal_ob-26f521"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_observable_from_js-node_modules_rxjs_dist_esm_int-f5c4d4"), __webpack_require__.e("default-node_modules_angular_cdk_fesm2022_a11y_mjs"), __webpack_require__.e("default-node_modules_angular_material_fesm2022_core_mjs")]).then(() => (() => (__webpack_require__(/*! @angular/material/core */ 5309))))))),
+/******/ 		6751: () => (loadStrictSingletonVersion("default", "@angular/forms", false, [2,17,1,0], () => (Promise.all([__webpack_require__.e("default-webpack_sharing_consume_default_angular_common_angular_common"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_Observable_js-node_modules_rxjs_dist_esm_internal-a1f6ab"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_observable_innerFrom_js-node_modules_rxjs_dist_es-f396f9"), __webpack_require__.e("default-node_modules_angular_forms_fesm2022_forms_mjs")]).then(() => (() => (__webpack_require__(/*! @angular/forms */ 8849))))))),
+/******/ 		652: () => (loadStrictSingletonVersion("default", "@angular/platform-browser", false, [2,17,1,0], () => (Promise.all([__webpack_require__.e("default-webpack_sharing_consume_default_angular_common_http_angular_common_http"), __webpack_require__.e("default-node_modules_angular_platform-browser_fesm2022_platform-browser_mjs")]).then(() => (() => (__webpack_require__(/*! @angular/platform-browser */ 6480))))))),
+/******/ 		2210: () => (loadStrictSingletonVersion("default", "@angular/common/http", false, [2,17,1,0], () => (Promise.all([__webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_Observable_js-node_modules_rxjs_dist_esm_internal-a1f6ab"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_observable_innerFrom_js-node_modules_rxjs_dist_es-f396f9"), __webpack_require__.e("default-node_modules_angular_common_fesm2022_http_mjs")]).then(() => (() => (__webpack_require__(/*! @angular/common/http */ 4860))))))),
+/******/ 		1940: () => (loadStrictSingletonVersion("default", "@angular/material/form-field", false, [2,17,3,10], () => (Promise.all([__webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_Observable_js-node_modules_rxjs_dist_esm_internal-a1f6ab"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_observable_innerFrom_js-node_modules_rxjs_dist_es-f396f9"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_material_core_angular_material_core"), __webpack_require__.e("default-node_modules_angular_cdk_fesm2022_platform_mjs"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_Subject_js-node_modules_rxjs_dist_esm_internal_ob-26f521"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_observable_from_js-node_modules_rxjs_dist_esm_int-f5c4d4"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_animations_angular_animations"), __webpack_require__.e("default-node_modules_angular_material_fesm2022_form-field_mjs")]).then(() => (() => (__webpack_require__(/*! @angular/material/form-field */ 1333))))))),
+/******/ 		8978: () => (loadStrictSingletonVersion("default", "@angular/animations/browser", false, [2,17,1,0], () => (Promise.all([__webpack_require__.e("default-webpack_sharing_consume_default_angular_animations_angular_animations"), __webpack_require__.e("default-node_modules_angular_animations_fesm2022_browser_mjs")]).then(() => (() => (__webpack_require__(/*! @angular/animations/browser */ 570))))))),
+/******/ 		7945: () => (loadStrictSingletonVersion("default", "@angular/material/button", false, [2,17,3,10], () => (Promise.all([__webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_Observable_js-node_modules_rxjs_dist_esm_internal-a1f6ab"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_observable_innerFrom_js-node_modules_rxjs_dist_es-f396f9"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_material_core_angular_material_core"), __webpack_require__.e("default-node_modules_angular_cdk_fesm2022_platform_mjs"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_Subject_js-node_modules_rxjs_dist_esm_internal_ob-26f521"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_observable_from_js-node_modules_rxjs_dist_esm_int-f5c4d4"), __webpack_require__.e("default-node_modules_angular_cdk_fesm2022_a11y_mjs"), __webpack_require__.e("default-node_modules_angular_material_fesm2022_button_mjs")]).then(() => (() => (__webpack_require__(/*! @angular/material/button */ 895))))))),
+/******/ 		706: () => (loadStrictSingletonVersion("default", "@angular/material/toolbar", false, [2,17,3,10], () => (Promise.all([__webpack_require__.e("default-webpack_sharing_consume_default_angular_material_core_angular_material_core"), __webpack_require__.e("default-node_modules_angular_cdk_fesm2022_platform_mjs"), __webpack_require__.e("common")]).then(() => (() => (__webpack_require__(/*! @angular/material/toolbar */ 2484))))))),
+/******/ 		7871: () => (loadStrictSingletonVersion("default", "@angular/material/icon", false, [2,17,3,10], () => (Promise.all([__webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_Observable_js-node_modules_rxjs_dist_esm_internal-a1f6ab"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_observable_innerFrom_js-node_modules_rxjs_dist_es-f396f9"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_material_core_angular_material_core"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_platform-browser_angular_platform-browser"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_common_http_angular_common_http"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_Subject_js-node_modules_rxjs_dist_esm_internal_ob-fdb1f9"), __webpack_require__.e("default-node_modules_angular_material_fesm2022_icon_mjs")]).then(() => (() => (__webpack_require__(/*! @angular/material/icon */ 6515))))))),
+/******/ 		7425: () => (loadStrictSingletonVersion("default", "@angular/material/card", false, [2,17,3,10], () => (Promise.all([__webpack_require__.e("default-webpack_sharing_consume_default_angular_material_core_angular_material_core"), __webpack_require__.e("default-node_modules_angular_material_fesm2022_card_mjs")]).then(() => (() => (__webpack_require__(/*! @angular/material/card */ 8497))))))),
+/******/ 		5168: () => (loadStrictSingletonVersion("default", "@angular/material/input", false, [2,17,3,10], () => (Promise.all([__webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_Observable_js-node_modules_rxjs_dist_esm_internal-a1f6ab"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_observable_innerFrom_js-node_modules_rxjs_dist_es-f396f9"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_material_core_angular_material_core"), __webpack_require__.e("default-node_modules_angular_cdk_fesm2022_platform_mjs"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_Subject_js-node_modules_rxjs_dist_esm_internal_ob-26f521"), __webpack_require__.e("default-node_modules_angular_material_fesm2022_input_mjs")]).then(() => (() => (__webpack_require__(/*! @angular/material/input */ 26))))))),
+/******/ 		4418: () => (loadStrictSingletonVersion("default", "@angular/material/checkbox", false, [2,17,3,10], () => (Promise.all([__webpack_require__.e("default-webpack_sharing_consume_default_angular_material_core_angular_material_core"), __webpack_require__.e("default-node_modules_angular_material_fesm2022_checkbox_mjs")]).then(() => (() => (__webpack_require__(/*! @angular/material/checkbox */ 6658))))))),
+/******/ 		9895: () => (loadStrictSingletonVersion("default", "@angular/material/divider", false, [2,17,3,10], () => (Promise.all([__webpack_require__.e("default-webpack_sharing_consume_default_angular_material_core_angular_material_core"), __webpack_require__.e("common"), __webpack_require__.e("node_modules_angular_cdk_fesm2022_coercion_mjs-_bff60")]).then(() => (() => (__webpack_require__(/*! @angular/material/divider */ 9400)))))))
 /******/ 	};
 /******/ 	// no consumes in initial chunks
 /******/ 	var chunkMapping = {
-/******/ 		"571": [
-/******/ 			6571
-/******/ 		],
-/******/ 		"593": [
-/******/ 			2210
-/******/ 		],
-/******/ 		"652": [
-/******/ 			652
-/******/ 		],
-/******/ 		"731": [
+/******/ 		"default-webpack_sharing_consume_default_angular_core_angular_core": [
 /******/ 			3731
 /******/ 		],
-/******/ 		"879": [
-/******/ 			1873
+/******/ 		"default-webpack_sharing_consume_default_angular_common_angular_common": [
+/******/ 			6571
 /******/ 		],
-/******/ 		"964": [
+/******/ 		"default-webpack_sharing_consume_default_angular_router_angular_router": [
 /******/ 			9964
+/******/ 		],
+/******/ 		"default-webpack_sharing_consume_default_angular_animations_angular_animations": [
+/******/ 			8012
+/******/ 		],
+/******/ 		"default-webpack_sharing_consume_default_angular_material_core_angular_material_core": [
+/******/ 			2270
+/******/ 		],
+/******/ 		"default-webpack_sharing_consume_default_angular_forms_angular_forms": [
+/******/ 			6751
+/******/ 		],
+/******/ 		"default-webpack_sharing_consume_default_angular_platform-browser_angular_platform-browser": [
+/******/ 			652
+/******/ 		],
+/******/ 		"default-webpack_sharing_consume_default_angular_common_http_angular_common_http": [
+/******/ 			2210
+/******/ 		],
+/******/ 		"default-webpack_sharing_consume_default_angular_material_form-field_angular_material_form-field": [
+/******/ 			1940
+/******/ 		],
+/******/ 		"default-webpack_sharing_consume_default_angular_animations_browser_angular_animations_browser": [
+/******/ 			8978
+/******/ 		],
+/******/ 		"default-webpack_sharing_consume_default_angular_material_button_angular_material_button-webpa-f27d9f": [
+/******/ 			7945,
+/******/ 			706,
+/******/ 			7871,
+/******/ 			7425
+/******/ 		],
+/******/ 		"default-apps_angular_src_app_features_register_register_component_ts": [
+/******/ 			5168,
+/******/ 			4418,
+/******/ 			9895
 /******/ 		]
 /******/ 	};
 /******/ 	var startedInstallModules = {};
@@ -469,7 +518,7 @@ __webpack_require__.d(exports, {
 /******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 	// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 	var installedChunks = {
-/******/ 		380: 0
+/******/ 		"angular": 0
 /******/ 	};
 /******/ 	
 /******/ 	__webpack_require__.f.j = (chunkId, promises) => {
@@ -481,7 +530,7 @@ __webpack_require__.d(exports, {
 /******/ 				if(installedChunkData) {
 /******/ 					promises.push(installedChunkData[2]);
 /******/ 				} else {
-/******/ 					if(!/^(571|652|731|964)$/.test(chunkId)) {
+/******/ 					if(!/^default\-webpack_sharing_consume_default_angular_(animations_(angular_animations|browser_angular_animations_browser)|co(mmon_(angular_common|http_angular_common_http)|re_angular_core)|material_(button_angular_material_button\-webpa\-f27d9f|core_angular_material_core|form\-field_angular_material_form\-field)|(platform\-browser_angular_platform\-brows|router_angular_rout)er|forms_angular_forms)$/.test(chunkId)) {
 /******/ 						// setup Promise in chunk cache
 /******/ 						var promise = new Promise((resolve, reject) => (installedChunkData = installedChunks[chunkId] = [resolve, reject]));
 /******/ 						promises.push(installedChunkData[2] = promise);
@@ -561,3 +610,5 @@ __webpack_require__.d(exports, {
 /******/ var __webpack_exports__init = __webpack_exports__.init;
 /******/ export { __webpack_exports__get as get, __webpack_exports__init as init };
 /******/ 
+
+//# sourceMappingURL=remoteEntry.mjs.map
