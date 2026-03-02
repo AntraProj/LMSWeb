@@ -1,0 +1,75 @@
+<lmsweb-header></lmsweb-header>
+<div class="emailVerify">
+  <h1 class="emailVerify-logo__h1">Antra LMS</h1>
+
+  <mat-card class="email-verify__card">
+
+      <div class="icon-wrapper">
+      <mat-icon>mail</mat-icon>
+    </div>
+
+
+    <h2>Verify Your Email</h2>
+
+    <p class="email-verify__subtitle">
+      We've sent a 6-digit verification code to
+      <br>
+      <strong>your&#64;email.com</strong>
+    </p>
+    <p class="email-verify__subtitle"> Please enter the code below to verify your account. </p>
+
+    <form [formGroup]="otpForm" >
+
+      <div class="email-Otp__container">
+        <input
+          *ngFor="let control of digits.controls; let i = index"
+          type="text"
+          maxlength="1"
+         
+        />
+      </div>
+
+      <button
+       
+        color="primary"
+        class="verify-btn"
+        [disabled]="otpForm.invalid"
+        type="submit">
+        Verify Email
+      </button>
+
+    </form>
+
+    <p class="resend">
+      Resend code in <strong>{{ countdown() }}s</strong>
+    </p>
+
+    <div class="email-info__box">
+      <mat-icon>info</mat-icon>
+      
+      <div>
+        <strong>Didn't receive the code?</strong>
+        <p>Check your spam folder or wait for the timer to resend</p>
+      </div>
+    </div>
+    <button
+    mat-outlined-button
+  mat-stroked-button
+  color="primary"
+  class="email-back__btn" [routerLink]="['/login']" >
+
+  <mat-icon>arrow_back</mat-icon>
+  Back to Sign In
+</button>
+
+<div class="email-divider"></div>
+
+<div class="email-support__section">
+  <p class="email-help__text">Need help?</p>
+  <a class="email-support__link" href="#">Contact Support</a>
+</div>
+
+  </mat-card>
+</div>
+
+<lmsweb-footer></lmsweb-footer>

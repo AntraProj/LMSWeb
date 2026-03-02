@@ -33,6 +33,10 @@
     flex-direction: column;
 }
 
+.antra-lms-link {
+  text-decoration: none;
+}
+
 .header h2 {
     color: #2F3E9E;
     font-size: 16px;

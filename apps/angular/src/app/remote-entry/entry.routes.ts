@@ -2,8 +2,8 @@ import { Route } from '@angular/router';
 import { RemoteEntryComponent } from './entry.component';
 
 export const remoteRoutes: Route[] = [
-  { 
-    path: '', 
+  {
+    path: '',
     component: RemoteEntryComponent,
     children: [
       {
@@ -11,6 +11,21 @@ export const remoteRoutes: Route[] = [
         loadComponent: () =>
           import('../home/home.component').then(m => m.HomeComponent),
       },
-    ]
+      {
+        path: 'landing',
+        loadComponent: () =>
+          import('../features/landing/landing.component').then(
+            (m) => m.LandingComponent
+          ),
+      },
+      {
+        path: 'register',
+        loadComponent: () =>
+          import('../features/register/register.component').then(
+            (m) => m.RegisterComponent
+          ),
+      },
+
+    ],
   },
 ];
