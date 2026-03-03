@@ -1,0 +1,14 @@
+.footer {
+  background: #2f3ea8; 
+  color: white;
+  padding: 18px 16px;
+  margin-top: 0;
+}
+
+.footer-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 13px;
+  opacity: 0.95;
+}
