@@ -6,10 +6,11 @@ export function ProjectGrid({ projects }: { projects: Project[] }) {
     <Box
       sx={{
         display: "grid",
-        gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
+        gridTemplateColumns: "repeat(auto-fill, 300px)",
         gap: 4,
         px: 4,
         py: 4,
+        justifyContent: "start",
       }}
     >
       {projects.map((p) => (
