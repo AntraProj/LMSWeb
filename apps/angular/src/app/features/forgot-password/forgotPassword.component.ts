@@ -32,7 +32,7 @@ export class ForgotPasswordComponent {
   submit(): void {
     if (this.form.invalid) return;
 
-    const email = this.form.value.email;
+    const email = this.form.value.email ?? "";
     console.log('Reset email sent to:', email);
   }
 }
