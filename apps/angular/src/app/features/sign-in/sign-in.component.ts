@@ -7,7 +7,6 @@ import {MatButtonModule} from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from '../../shared/layout/header/header.component';
 import { FooterComponent } from '../../shared/layout/footer/footer.component';
-import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'lmsweb-sign-in',
@@ -20,7 +19,7 @@ import { RouterLink } from '@angular/router';
     MatButtonModule,
     HttpClientModule,
     HeaderComponent,
-    FooterComponent, RouterLink
+    FooterComponent
   ],
   templateUrl: './sign-in.component.html',
   styleUrls: ['./sign-in.component.css'],
