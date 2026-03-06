@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@lmsweb/shared-state": ["libs/shared-state/src/index.ts"],
       "angular/Routes": ["apps/angular/src/app/remote-entry/entry.routes.ts"],
       "react/Module": ["apps/react/src/remote-entry.ts"]
     }

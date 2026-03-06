@@ -30,6 +30,14 @@ const config: ModuleFederationConfig = {
         requiredVersion: false,
       };
     }
+    if (libraryName === "@lmsweb/shared-state") {
+      return {
+        ...defaultConfig,
+        singleton: true,
+        eager: true,
+      };
+    }
+
     return defaultConfig;
   },
 };

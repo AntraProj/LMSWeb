@@ -16,8 +16,19 @@ const config: ModuleFederationConfig = {
    */
   remotes: [
     'angular',
-  ['react', 'http://localhost:4202/remoteEntry.js']
+    ['react', 'http://localhost:4202/remoteEntry.js']
   ],
+  shared: (libraryName, defaultConfig) => {
+    if (libraryName === "@lmsweb/shared-state") {
+      return {
+        ...defaultConfig,
+        singleton: true,
+        eager: true,
+      };
+    }
+
+    return defaultConfig;
+  }
 };
 
 export default config;
