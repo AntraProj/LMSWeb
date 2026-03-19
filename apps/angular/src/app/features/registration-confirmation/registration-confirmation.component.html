@@ -1,0 +1,32 @@
+
+<div class="confirmation-wrapper">
+
+  <div class="confirmation-card">
+
+    <div class="icon-container">
+      <div class="icon-circle">
+        <mat-icon class="success-icon">check</mat-icon>
+         
+      </div>
+    </div>
+
+    <h1>Account Created Successfully!</h1>
+
+    <p class="description">
+      Your Antra LMS account has been created and verified.
+      You can now log in and start exploring our courses.
+    </p>
+
+    <div class="actions">
+      <button mat-raised-button color="primary" (click)="goToPage('/login')">
+        Go to Login
+      </button>
+
+      <button mat-stroked-button (click)="goToPage('')">
+        Back to Home
+      </button>
+    </div>
+
+  </div>
+
+</div>

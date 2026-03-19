@@ -1,0 +1,70 @@
+.confirmation-wrapper {
+  min-height: 100vh;
+  background-color: #f5f7fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.confirmation-card {
+  width: 100%;
+  max-width: 900px;
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 80px 60px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.icon-circle {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-color: rgba(76, 175, 80, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-icon {
+  font-size: 70px;
+  color: #4caf50;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 17px;
+  color: #6b7280;
+  max-width: 600px;
+  margin: 0 auto 50px;
+  line-height: 1.7;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.actions button {
+  min-width: 180px;
+  height: 48px;
+  font-size: 15px;
+  border-radius: 8px;
+}

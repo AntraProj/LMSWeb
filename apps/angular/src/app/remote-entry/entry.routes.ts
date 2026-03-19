@@ -25,6 +25,12 @@ export const remoteRoutes: Route[] = [
             (m) => m.RegisterComponent
           ),
       },
+      {
+    path: 'registration-success',
+    loadComponent: () =>
+      import('../features/registration-confirmation/registration-confirmation.component')
+      .then(m => m.RegistrationConfirmationComponent),
+    },
 
     ],
   },
