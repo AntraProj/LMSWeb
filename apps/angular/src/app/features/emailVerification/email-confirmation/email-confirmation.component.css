@@ -121,21 +121,21 @@
 }
 
 .step {
-  display: flex;
-  align-items: center;
-  gap: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
 
 .step-number {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background-color: #EEF2FF;   
-  color: var(--color-royal-blue);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #EEF2FF;   
+    color: var(--color-royal-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
 }
 
 .step-text {
